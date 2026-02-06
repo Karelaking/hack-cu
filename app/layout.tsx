@@ -1,5 +1,6 @@
 import "./globals.css";
 import type { Metadata } from "next";
+import { ClerkProvider } from "@clerk/nextjs";
 import RootProvider from "@/provider/RootProvider";
 import HeaderLayout from "@/layout/HeaderLayout";
 import FooterLayout from "@/layout/FooterLayout";
@@ -15,14 +16,16 @@ export default function RootLayout({
   children: React.ReactNode;
 }>) {
   return (
-    <html lang="en">
-      <body className="antialiased w-full min-h-dvh bg-background text-foreground">
-        <RootProvider>
-          <HeaderLayout />
-          {children}
-          <FooterLayout />
-        </RootProvider>
-      </body>
-    </html>
+    <ClerkProvider>
+      <html lang="en">
+        <body className="antialiased w-full min-h-dvh bg-background text-foreground">
+          <RootProvider>
+            <HeaderLayout />
+            {children}
+            <FooterLayout />
+          </RootProvider>
+        </body>
+      </html>
+    </ClerkProvider>
   );
 }

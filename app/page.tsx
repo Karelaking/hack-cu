@@ -5,9 +5,9 @@ import PlansPage from "@/pages/PlansPage";
 
 export default function Home() {
   return (
-    <section className="min-h-screen border-x border-neutral-200">
+    <section className="min-h-screen border-x border-border">
       <HeroPage />
-      <AboutPage  />
+      <AboutPage />
       <FeaturePage />
       <PlansPage />
     </section>

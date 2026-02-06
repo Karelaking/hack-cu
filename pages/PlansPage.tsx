@@ -37,7 +37,7 @@ const PlanCard = ({
       p-6 sm:p-8
       transition-all duration-300
       group
-      flex flex-col h-full bg-white/50 dark:bg-black/50 backdrop-blur-sm
+      flex flex-col h-full bg-card/60 backdrop-blur-sm
       hover:shadow-lg
       border-border
       hover:border-primary/40
@@ -54,7 +54,7 @@ const PlanCard = ({
       {/* Header */}
       <div className="mb-6 sm:mb-8">
         <div className="flex items-start justify-between mb-3">
-          <h3 className="text-5xl sm:text-6xl text-center font-bold text-neutral-600 w-full">{name}</h3>
+          <h3 className="text-5xl sm:text-6xl text-center font-bold text-foreground w-full">{name}</h3>
         </div>
         <p className="text-sm sm:text-base text-muted-foreground mb-4">{description}</p>
 
@@ -66,7 +66,7 @@ const PlanCard = ({
       </div>
 
       {/* Features List */}
-      <div className="space-y-3 flex-1 mb-0 border border-border/50 p-6 sm:pt-8 rounded-xl bg-linear-to-br from-neutral-300/5 to-neutral-300/10">
+      <div className="space-y-3 flex-1 mb-0 border border-border/50 p-6 sm:pt-8 rounded-xl bg-linear-to-br from-muted/5 to-muted/10">
         <p className="text-xs font-semibold text-muted-foreground uppercase tracking-wider">
           What&apos;s included
         </p>
@@ -140,11 +140,11 @@ const PlansPage = () => {
   }
 
   return (
-    <PageLayout className="py-0 pt-8 lg:py-0 lg:pt-16 bg-neutral-50 px-0">
+    <PageLayout className="py-0 pt-8 lg:py-0 lg:pt-16 bg-background px-0">
       <section className="max-w-6xl mx-auto text-center space-y-8 sm:space-y-12 px-4">
         {/* Header */}
         <div className="space-y-4 sm:space-y-6">
-          <h2 className="text-4xl sm:text-5xl lg:text-7xl font-bold tracking-tight text-neutral-500">
+          <h2 className="text-4xl sm:text-5xl lg:text-7xl font-bold tracking-tight text-foreground">
             Choose Your <span className="text-primary/60">Plan</span>
           </h2>
           <p className="text-base sm:text-lg text-muted-foreground max-w-2xl mx-auto">
@@ -164,15 +164,15 @@ const PlansPage = () => {
 
         {/* FAQ or Additional Info */}
       </section>
-        <div className="mt-12 sm:mt-16 p-6 sm:p-12 border-y border-primary/30 bg-linear-to-br from-primary/5 to-primary/10 text-center">
-          <h3 className="text-xl sm:text-4xl font-bold text-neutral-500 mb-3">
-            Need more information?
-          </h3>
-          <p className="text-muted-foreground text-sm sm:text-base mb-4">
-            Contact our team to discuss custom plans or enterprise solutions for large-scale farming operations.
-          </p>
-          <Button variant="outline">Contact Sales</Button>
-        </div>
+      <div className="mt-12 sm:mt-16 p-6 sm:p-12 border-y border-primary/30 bg-linear-to-br from-primary/5 to-primary/10 text-center">
+        <h3 className="text-xl sm:text-4xl font-bold text-foreground mb-3">
+          Need more information?
+        </h3>
+        <p className="text-muted-foreground text-sm sm:text-base mb-4">
+          Contact our team to discuss custom plans or enterprise solutions for large-scale farming operations.
+        </p>
+        <Button variant="outline">Contact Sales</Button>
+      </div>
     </PageLayout>
   )
 }

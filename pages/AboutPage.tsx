@@ -89,11 +89,11 @@ const AboutCard = ({
     </div>
     <div className="relative z-10">
       <div className="mb-4 inline-flex rounded-lg bg-white/10 dark:bg-black/10 p-2.5 backdrop-blur-sm group-hover:bg-white/20 dark:group-hover:bg-black/20 transition-colors">
-        <div className="text-neutral-500 group-hover:text-primary  group-hover:scale-125 transition-all duration-300">
+        <div className="text-foreground group-hover:text-primary group-hover:scale-125 transition-all duration-300">
           {icon}
         </div>
       </div>
-      <h3 className="text-xl sm:text-2xl font-bold text-primary/60 mb-2 group-hover:translate-x-1 transition-transform duration-300 group-hover:text-primary">
+      <h3 className="text-xl sm:text-2xl font-bold text-foreground/80 mb-2 group-hover:translate-x-1 transition-transform duration-300 group-hover:text-primary">
         {title}
       </h3>
       <p className="text-sm sm:text-base text-muted-foreground leading-relaxed">
@@ -165,7 +165,7 @@ const AboutPage = () => {
     <PageLayout className="min-h-dvh">
       <PageSection className="">
         <PageContent>
-          <h1 className="text-4xl sm:text-5xl lg:text-6xl font-bold text-neutral-500 tracking-tight translate-z-90 text-shadow sm:text-shadow-sm">
+          <h1 className="text-4xl sm:text-5xl lg:text-6xl font-bold text-foreground tracking-tight translate-z-90 text-shadow sm:text-shadow-sm">
             Built to help farmers <span className='text-primary/60'>grow smarter</span>, faster, and sustainably.
           </h1>
           <div className="grid grid-cols-1 lg:grid-cols-2 gap-10 lg:gap-16 items-center">
@@ -219,7 +219,7 @@ const AboutPage = () => {
       <PageSection className="mt-12 sm:mt-16 lg:mt-20">
         <PageContent>
           <div className="mb-8 sm:mb-12 text-center">
-            <h2 className="text-3xl sm:text-4xl lg:text-6xl font-bold text-neutral-500 mb-4 text-shadow sm:text-shadow-sm">
+            <h2 className="text-3xl sm:text-4xl lg:text-6xl font-bold text-foreground mb-4 text-shadow sm:text-shadow-sm">
               <span className='text-primary/60'>Why</span> Farmers Choose Us
             </h2>
             <p className="text-muted-foreground text-base sm:text-lg max-w-2xl mx-auto">
