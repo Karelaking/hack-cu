@@ -1,10 +1,18 @@
 import { Button } from "@/components/ui/button";
-import { Leaf, Sun } from "lucide-react";
+import ThemeToggle from "@/components/theme-toggle";
+import { Leaf } from "lucide-react";
 import Link from "next/link";
+import {
+  SignedIn,
+  SignedOut,
+  SignInButton,
+  SignUpButton,
+  UserButton,
+} from "@clerk/nextjs";
 
 const HeaderLayout = () => {
   return (
-    <header className="sticky top-0 z-100 w-full border-b border-border bg-white/60 backdrop-blur-sm shadow-inset transition-colors duration-300">
+    <header className="sticky top-0 z-100 w-full border-b border-border bg-background/80 backdrop-blur-sm shadow-inset transition-colors duration-300">
       <div className="mx-auto flex w-full max-w-6xl items-center justify-between py-4 px-4 sm:px-0">
         <Link
           href="/"
@@ -13,13 +21,22 @@ const HeaderLayout = () => {
           <Leaf size={28} className="inline-block mr-4 text-primary" />
           LOGO
         </Link>
-        <div className="flex items-center gap-4">
-          <Button className="" variant="ghost">
-            <Sun size={28} />
-          </Button>
-          <Button className="hidden sm:inline-flex" variant="default">
-            Get Started
-          </Button>
+        <div className="flex items-center gap-3">
+          <ThemeToggle />
+          <SignedOut>
+            <SignInButton>
+              <Button variant="outline" size="sm" className="hidden sm:inline-flex">
+                Sign in
+              </Button>
+            </SignInButton>
+            <SignUpButton>
+              <Button size="sm">Sign up</Button>
+            </SignUpButton>
+          </SignedOut>
+          <SignedIn>
+            <UserButton />
+          </SignedIn>
+
         </div>
       </div>
     </header>
